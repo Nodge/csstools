@@ -1,0 +1,27 @@
+
+module.exports = {
+	tokens: {
+		token1: {
+			plan: 'super',
+			created: new Date(2014, 7, 4),
+			expires: new Date(2100, 7, 4)
+		},
+		token2: {
+			plan: 'default',
+			created: new Date(2014, 7, 4),
+			expires: new Date(2015, 7, 4)
+		}
+	},
+	plans: {
+		super: {
+			period: 'second',
+			requests: 10
+		},
+		default: {
+			period: 'second',
+			requests: 3,
+			allowedTools: ['less']
+		}
+	},
+	defaultPlan: 'default'
+};

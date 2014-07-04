@@ -1,18 +1,18 @@
 // Include the cluster module
 var cluster = require('cluster');
-var config = require('./config');
+var config = require('./app/config/config');
 var port = process.env.PORT || config.port;
 
 if (cluster.isMaster) {
 	// Code to run if we're in the master process
 
 	// Count the machine's CPUs
-	var cpuCount = require('os').cpus().length;
-
 	// Create a worker for each CPU
-	for (var i = 0; i < cpuCount; i += 1) {
+	for (var i = 0; i < config.threads; i += 1) {
 		cluster.fork();
 	}
+
+	console.log("App listening on port " + port);
 }
 else {
 	// Code to run if we're in a worker process
