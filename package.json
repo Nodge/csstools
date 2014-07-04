@@ -1,0 +1,28 @@
+{
+  "name": "csstools",
+  "version": "1.0.0",
+  "description": "Provides API to process CSS files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nodge/csstools"
+  },
+  "author": "Nodge <nodge@yandex.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nodge/csstools/issues"
+  },
+  "homepage": "https://github.com/Nodge/csstools",
+  "dependencies": {
+    "async": "~0.9.0",
+    "autoprefixer": "~2.1.0",
+    "body-parser": "~1.4.3",
+    "express": "~4.4.5",
+    "less": "~1.7.3",
+    "limiter": "~1.0.5",
+    "underscore": "~1.6.0"
+  }
+}
